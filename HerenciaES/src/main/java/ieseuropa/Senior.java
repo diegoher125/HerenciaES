@@ -8,7 +8,7 @@ public class Senior extends Empleado {
 	
 	@Override
 	public String reuniones() {
-		return "Los senior no pueden ir a las reuniones";
+		return "Estas invitado a la reunion";
 	}
 	
 	@Override
