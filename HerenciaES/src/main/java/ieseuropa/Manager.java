@@ -3,11 +3,7 @@ package main.java.ieseuropa;
 public class Manager extends EmpleadoBonus {
 	
 	public Manager(String nombre) {
-		super(2500, nombre);
-	}
-	
-	public void objetivosCumplidos() {
-		setBonus(true);
+		super(2500, nombre,5);
 	}
 
 	@Override
@@ -20,13 +16,5 @@ public class Manager extends EmpleadoBonus {
 		return "Te tocan planificaciones";
 	}
 	
-	@Override
-	public float cobrar() {
-		if(isBonus()) {
-			return getSueldo() * 1.05f;
-		}else {
-			return getSueldo();
-		}
-	}
 
 }

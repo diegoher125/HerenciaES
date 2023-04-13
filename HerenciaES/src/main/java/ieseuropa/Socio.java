@@ -3,12 +3,9 @@ package main.java.ieseuropa;
 public class Socio extends EmpleadoBonus {
 	
 	public Socio(String nombre) {
-		super(3000, nombre);
+		super(3000, nombre, 10);
 	}
-	
-	public void objetivosCumplidos() {
-		setBonus(true);
-	}
+}
 
 	@Override
 	public String reuniones() {
@@ -20,13 +17,6 @@ public class Socio extends EmpleadoBonus {
 		return "Tu estas de copas en el bar";
 	}
 	
-	@Override
-	public float cobrar() {
-		if(isBonus()) {
-			return getSueldo() * 1.1f;
-		}else {
-			return getSueldo();
-		}
-	}
+	
 
 }
