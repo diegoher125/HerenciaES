@@ -2,23 +2,16 @@ package main.java.ieseuropa;
 
 public class EmpleadoBonus extends Empleado {
 	
-private boolean bonus;
+	private boolean cumple;
+	private int bonus;
 	
-	public EmpleadoBonus(int sueldo, String nombre) {
+	public EmpleadoBonus(int sueldo, String nombre, int bonus) {
 		super(sueldo, nombre);
-		this.bonus = false;
-	}
-	
-	public boolean isBonus() {
-		return bonus;
-	}
-
-	public void setBonus(boolean bonus) {
-		this.bonus = bonus;
+		this.cumple = false;
 	}
 	
 	public void objetivosCumplidos() {
-		this.bonus = true;
+		this.cumple = true;
 	}
 
 }

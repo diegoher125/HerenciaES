@@ -2,19 +2,19 @@ package main.java.ieseuropa;
 
 public class Empleado {
 	
-	private int sueldo;
+	private float sueldo;
 	private String nombre;
 	
-	public Empleado(int sueldo, String nombre) {
+	public Empleado(float sueldo, String nombre) {
 		this.sueldo = sueldo;
 		this.nombre = nombre;
 	}
 
-	public int getSueldo() {
+	public float getSueldo() {
 		return sueldo;
 	}
 
-	public void setSueldo(int sueldo) {
+	public void setSueldo(float sueldo) {
 		this.sueldo = sueldo;
 	}
 	
@@ -27,7 +27,7 @@ public class Empleado {
 	}
 	
 	public float cobrar() {
-		return 0;
+		return sueldo;
 	}
 
 	@Override
