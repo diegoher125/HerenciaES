@@ -28,7 +28,7 @@ public class Socio extends Empleado {
 	
 	@Override
 	public String trabajar() {
-		return "Te tocan planificaciones";
+		return "Tu estas de copas en el bar";
 	}
 	
 	@Override
