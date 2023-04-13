@@ -1,24 +1,13 @@
 package main.java.ieseuropa;
 
-public class Manager extends Empleado {
-	
-	private boolean bonus;
+public class Manager extends EmpleadoBonus {
 	
 	public Manager(String nombre) {
 		super(2500, nombre);
-		this.bonus = false;
-	}
-	
-	public boolean isBonus() {
-		return bonus;
-	}
-
-	public void setBonus(boolean bonus) {
-		this.bonus = bonus;
 	}
 	
 	public void objetivosCumplidos() {
-		this.bonus = true;
+		setBonus(true);
 	}
 
 	@Override
@@ -33,7 +22,7 @@ public class Manager extends Empleado {
 	
 	@Override
 	public float cobrar() {
-		if(bonus) {
+		if(isBonus()) {
 			return getSueldo() * 1.05f;
 		}else {
 			return getSueldo();

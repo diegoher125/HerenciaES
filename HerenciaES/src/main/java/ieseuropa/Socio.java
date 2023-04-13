@@ -1,24 +1,13 @@
 package main.java.ieseuropa;
 
-public class Socio extends Empleado {
-	
-	private boolean bonus;
+public class Socio extends EmpleadoBonus {
 	
 	public Socio(String nombre) {
 		super(3000, nombre);
-		this.bonus = false;
-	}
-	
-	public boolean isBonus() {
-		return bonus;
-	}
-
-	public void setBonus(boolean bonus) {
-		this.bonus = bonus;
 	}
 	
 	public void objetivosCumplidos() {
-		this.bonus = true;
+		setBonus(true);
 	}
 
 	@Override
@@ -33,7 +22,7 @@ public class Socio extends Empleado {
 	
 	@Override
 	public float cobrar() {
-		if(bonus) {
+		if(isBonus()) {
 			return getSueldo() * 1.1f;
 		}else {
 			return getSueldo();
