@@ -5,7 +5,6 @@ public class Socio extends EmpleadoBonus {
 	public Socio(String nombre) {
 		super(3000, nombre, 10);
 	}
-}
 
 	@Override
 	public String reuniones() {
